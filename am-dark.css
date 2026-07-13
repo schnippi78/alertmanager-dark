@@ -1,0 +1,96 @@
+/* Dark theme for the Prometheus Alertmanager web UI (Bootstrap 4, no CSS variables).
+   Injected as a <link> before </head> by an nginx sub_filter — the Alertmanager
+   binary and its bundled UI are left completely unmodified.
+   Part of alertmanager-dark by schnippi78, MIT-licensed. */
+:root { color-scheme: dark; }
+html, body { background: #15171c !important; color: #d4d7dd !important; }
+a { color: #5ab0ff; }
+a:hover { color: #84c6ff; }
+.text-muted, .form-text { color: #8b929e !important; }
+hr { border-color: #2b303a; }
+
+/* Navbar */
+.navbar.bg-light { background: #1b1e24 !important; border-bottom: 1px solid #2b303a; }
+.navbar-light .navbar-brand { color: #f0f2f5; }
+.navbar-light .navbar-nav .nav-link { color: #aeb4bf; }
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.active { color: #f0f2f5; }
+.navbar-light .navbar-toggler { border-color: #2b303a; color: #aeb4bf; }
+
+/* Cards */
+.card { background: #1b1e24 !important; border-color: #2b303a !important; }
+.card-header { background: #20242b !important; border-bottom-color: #2b303a !important; }
+.card-footer { background: #20242b !important; border-top-color: #2b303a !important; }
+
+/* Nav-Tabs (Filter/Group im Card-Header) */
+.nav-tabs { border-bottom-color: #2b303a; }
+.nav-tabs .nav-link { color: #aeb4bf; }
+.nav-tabs .nav-link:hover { border-color: #2b303a; }
+.nav-tabs .nav-link.active {
+  background: #1b1e24; border-color: #2b303a #2b303a #1b1e24; color: #f0f2f5;
+}
+
+/* Formulare */
+.form-control, .custom-select {
+  background: #23272f !important; border-color: #363c47 !important; color: #e6e9ee !important;
+}
+.form-control::placeholder { color: #6d7481 !important; }
+.form-control:focus {
+  background: #23272f !important; border-color: #4a90e2 !important; color: #fff !important;
+  box-shadow: 0 0 0 .2rem rgba(74,144,226,.25) !important;
+}
+.form-control:disabled, .form-control[readonly] { background: #1c1f26 !important; }
+.input-group-text { background: #20242b !important; border-color: #363c47 !important; color: #aeb4bf !important; }
+.custom-control-label::before { background: #23272f; border-color: #363c47; }
+
+/* Buttons */
+.btn-outline-secondary { color: #aeb4bf; border-color: #464d5a; }
+.btn-outline-secondary:hover { background: #464d5a; color: #fff; }
+.btn-outline-info { color: #4bc2d6; border-color: #2f7f8c; }
+.btn-outline-info:hover { background: #2f7f8c; color: #fff; }
+.btn-outline-danger { color: #f0787f; border-color: #7f3238; }
+.btn-outline-danger:hover { background: #7f3238; color: #fff; }
+.btn-link { color: #5ab0ff; }
+.btn-secondary { background: #3a4150; border-color: #3a4150; }
+.btn-light { background: #2b303a; border-color: #2b303a; color: #d4d7dd; }
+.close { color: #d4d7dd; text-shadow: none; opacity: .7; }
+.close:hover { color: #fff; opacity: 1; }
+
+/* Alert-Boxen */
+.alert-warning { background: #2e2a17 !important; border-color: #4d4322 !important; color: #e6d59a !important; }
+.alert-info    { background: #16282e !important; border-color: #22505c !important; color: #9fd8e6 !important; }
+.alert-danger  { background: #2e1a1c !important; border-color: #5c2a2f !important; color: #f0a8ae !important; }
+.alert-success { background: #182a1e !important; border-color: #2b5c3d !important; color: #a6e0bd !important; }
+.alert-secondary { background: #20242b !important; border-color: #363c47 !important; color: #c3c8d1 !important; }
+
+/* Tabellen */
+.table { color: #d4d7dd; }
+.table td, .table th { border-top-color: #2b303a; }
+.table thead th { border-bottom-color: #363c47; }
+.table-bordered td, .table-bordered th { border-color: #2b303a; }
+.table-striped tbody tr:nth-of-type(odd) { background: rgba(255,255,255,.03); }
+.table-hover tbody tr:hover { background: rgba(255,255,255,.06); color: #fff; }
+
+/* Dropdowns / Listen */
+.dropdown-menu, .list-group-item { background: #1b1e24; border-color: #2b303a; color: #d4d7dd; }
+.dropdown-item { color: #d4d7dd; }
+.dropdown-item:hover { background: #2b303a; color: #fff; }
+.list-group-item-action:hover { background: #23272f; color: #fff; }
+
+/* Code / Pre */
+code, pre, kbd { background: #20242b !important; color: #e0b0ff !important; }
+pre { border: 1px solid #2b303a; border-radius: 4px; padding: .6rem; }
+
+/* Datepicker-Kalender (hartkodiertes #fff im Silence-Formular) */
+.calendar_ .date { background: #23272f !important; color: #aeb4bf !important; }
+.calendar_ .date.thismonth { color: #e6e9ee !important; }
+.calendar_ .date:hover { background: #2f3540 !important; color: #fff !important; }
+
+/* Modals */
+.modal-content { background: #1b1e24; color: #d4d7dd; }
+.modal-header, .modal-footer { border-color: #2b303a; }
+
+/* Pagination */
+.page-link { background: #1b1e24; border-color: #2b303a; color: #5ab0ff; }
+.page-item.disabled .page-link { background: #1b1e24; border-color: #2b303a; color: #5c636e; }

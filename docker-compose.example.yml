@@ -1,0 +1,22 @@
+version: "3.8"
+
+# Minimal example. This image is a drop-in replacement for prom/alertmanager:
+# it takes the same command-line flags and serves the same UI on :9093 —
+# just dark. Mount your own alertmanager.yml and pass flags as usual.
+
+services:
+  alertmanager:
+    image: schnippi78/alertmanager-dark:latest
+    ports:
+      - "9093:9093"
+    volumes:
+      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml:ro
+      - alertmanager-data:/alertmanager
+    # Same flags you would pass to upstream Alertmanager. If omitted, the
+    # image falls back to the upstream default config, exactly like prom/alertmanager.
+    command:
+      - "--config.file=/etc/alertmanager/alertmanager.yml"
+      - "--storage.path=/alertmanager"
+
+volumes:
+  alertmanager-data:
